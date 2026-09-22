@@ -1,0 +1,475 @@
+/* ------------------------------
+   CONFIGURACIÓN GENERAL
+--------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #fff8d6,
+        #ffe680,
+        #ffd34e
+    );
+
+    overflow: hidden;
+}
+
+
+/* ------------------------------
+   TARJETA
+--------------------------------*/
+
+.tarjeta {
+
+    width: 90%;
+
+    max-width: 600px;
+
+    min-height: 500px;
+
+    padding: 50px 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ------------------------------
+   PANTALLA INICIAL
+--------------------------------*/
+
+#inicio {
+
+    animation: aparecer 1.5s ease;
+
+}
+
+
+.flor-inicial {
+
+    font-size: 80px;
+
+    margin-bottom: 15px;
+
+    animation: flotar 3s infinite ease-in-out;
+
+}
+
+
+h1 {
+
+    font-size: 45px;
+
+    color: #d89500;
+
+    margin-bottom: 20px;
+
+}
+
+
+#inicio p {
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #665500;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* ------------------------------
+   BOTÓN
+--------------------------------*/
+
+button {
+
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    background: #f2ad00;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.08);
+
+    background: #d99200;
+
+}
+
+
+/* ------------------------------
+   SORPRESA
+--------------------------------*/
+
+#sorpresa {
+
+    display: none;
+
+    animation: aparecerSorpresa 2s ease;
+
+}
+
+
+/* ------------------------------
+   RAMITO
+--------------------------------*/
+
+.ramito {
+
+    margin-bottom: 20px;
+
+}
+
+.imagen-ramo {
+
+    width: 100px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    animation: crecerFlores 2s ease;
+
+}
+
+.hojas {
+
+    font-size: 40px;
+
+    margin-top: -15px;
+
+    animation: aparecer 2.5s ease;
+
+}
+
+
+/* ------------------------------
+   NOMBRE
+--------------------------------*/
+
+#sorpresa h2 {
+
+    font-size: 45px;
+
+    color: #d89500;
+
+    margin-top: 15px;
+
+}
+
+
+/* ------------------------------
+   TE QUIERO
+--------------------------------*/
+
+#sorpresa h3 {
+
+    font-size: 32px;
+
+    color: #e4a000;
+
+    margin: 15px 0;
+
+    animation: latido 2s infinite;
+
+}
+
+
+/* ------------------------------
+   MENSAJE
+--------------------------------*/
+
+.mensaje {
+
+    max-width: 480px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #665500;
+
+}
+
+
+/* ------------------------------
+   CORAZONES
+--------------------------------*/
+
+.corazones {
+
+    margin-top: 25px;
+
+    font-size: 25px;
+
+}
+
+
+/* ------------------------------
+   PÉTALOS DEL FONDO
+--------------------------------*/
+
+.petalos span {
+
+    position: absolute;
+
+    top: -10px;
+
+    font-size: 30px;
+
+    animation: caer 7s linear infinite;
+
+    z-index: 1;
+
+}
+
+
+/* Posiciones diferentes */
+
+.petalos span:nth-child(1) {
+
+    left: 10%;
+
+    animation-delay: 0s;
+
+}
+
+
+.petalos span:nth-child(2) {
+
+    left: 25%;
+
+    animation-delay: 2s;
+
+}
+
+
+.petalos span:nth-child(3) {
+
+    left: 40%;
+
+    animation-delay: 4s;
+
+}
+
+
+.petalos span:nth-child(4) {
+
+    left: 60%;
+
+    animation-delay: 1s;
+
+}
+
+
+.petalos span:nth-child(5) {
+
+    left: 75%;
+
+    animation-delay: 3s;
+
+}
+
+
+.petalos span:nth-child(6) {
+
+    left: 90%;
+
+    animation-delay: 5s;
+
+}
+
+
+/* ------------------------------
+   ANIMACIONES
+--------------------------------*/
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes aparecerSorpresa {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.5);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes crecerFlores {
+
+    0% {
+
+        transform: scale(0);
+
+    }
+
+    70% {
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes flotar {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes latido {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.08);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+@keyframes caer {
+
+    0% {
+
+        top: -50px;
+
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+
+        top: 110vh;
+
+        transform: rotate(360deg);
+
+    }
+
+}
